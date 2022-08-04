@@ -26,4 +26,3 @@ resource "azurerm_app_service_source_control" "appservice" {
   use_manual_integration = true
   use_mercurial      = false
 }
-
