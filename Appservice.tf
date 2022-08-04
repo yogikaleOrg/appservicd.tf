@@ -22,7 +22,7 @@ resource "azurerm_app_service" "appservice_dataservice"{
 resource "azurerm_app_service_source_control" "appservice" {
   app_id   = azurerm_app_service.appservice_dataservice.id
   repo_url = "https://github.com/kumarkasula/appservicd.tf.git"
-  branch   = "master"
+  branch   = "main"
   use_manual_integration = true
   use_mercurial      = false
 }
