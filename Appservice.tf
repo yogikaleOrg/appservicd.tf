@@ -5,9 +5,9 @@ resource "azurerm_app_service_plan" "appserviceplan" {
   name                = "DEV-Appserviceplan"
   location            = "eastus" 
   resource_group_name = "DEV-TF-RG" 
-  
-  kind                = "Linux"
-  reserved            = true
+  
+  kind     = "Linux"
+  reserved = "true" # Mandatory for Linux plans
 
   sku {
     tier = "Standard"
