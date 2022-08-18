@@ -13,6 +13,7 @@ resource "azurerm_app_service_plan" "appserviceplan" {
     tier = "Standard"
     size = "S1"
   }
+}
 
 resource "azurerm_app_service" "appservice_dataservice"{
   name                = "data-appservice"
