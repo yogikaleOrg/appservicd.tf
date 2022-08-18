@@ -1,20 +1,17 @@
 provider "azurerm" {
-  version = "=1.41.0"
+  features {}
 }
 resource "azurerm_app_service_plan" "appserviceplan" {
   name                = "DEV-Appserviceplan"
   location            = "eastus" 
   resource_group_name = "DEV-TF-RG" 
-
-  kind = "Linux"
   
+  kind                = "Linux"
+  reserved            = true
+
   sku {
     tier = "Standard"
     size = "S1"
-  }
-
-  properties {
-    reserved = true # Mandatory for Linux plans
   }
 }
 resource "azurerm_app_service" "appservice_dataservice"{
