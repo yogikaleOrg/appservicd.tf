@@ -1,7 +1,6 @@
 provider "azurerm" {
-  features {}
+  version = "=1.41.0"
 }
-
 resource "azurerm_app_service_plan" "appserviceplan" {
   name                = "DEV-Appserviceplan"
   location            = "eastus" 
