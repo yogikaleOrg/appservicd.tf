@@ -8,13 +8,16 @@ resource "azurerm_app_service_plan" "appserviceplan" {
   resource_group_name = "DEV-TF-RG" 
 
   kind = "Linux"
-
- sku {
+  
+  sku {
     tier = "Standard"
     size = "S1"
   }
-}
 
+  properties {
+    reserved = true # Mandatory for Linux plans
+  }
+}
 resource "azurerm_app_service" "appservice_dataservice"{
   name                = "data-appservice"
   location            =  "eastus"
