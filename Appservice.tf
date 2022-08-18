@@ -21,7 +21,7 @@ resource "azurerm_app_service" "appservice_dataservice"{
   resource_group_name =  "DEV-TF-RG"
   app_service_plan_id =  azurerm_app_service_plan.appserviceplan.id
   
-  app_settings {
+  app_settings = {
     WEBSITES_ENABLE_APP_SERVICE_STORAGE = false
 
     /*
