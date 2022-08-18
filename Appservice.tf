@@ -14,11 +14,6 @@ resource "azurerm_app_service_plan" "appserviceplan" {
     size = "S1"
   }
 
-  properties = {
-    reserved = true # Mandatory for Linux plans
-  }
-}
-
 resource "azurerm_app_service" "appservice_dataservice"{
   name                = "data-appservice"
   location            =  "eastus"
